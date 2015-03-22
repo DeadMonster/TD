@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ROOT>
+	<table wave="1" enemyname="boar" level="1" wait="3"/>
+	<table wave="1" enemyname="boar" level="1" wait="3"/>
+	<table wave="2" enemyname="boar" level="2" wait="4"/>
+	<table wave="2" enemyname="bird" level="2" wait="4"/>
+	<table wave="3" enemyname="boar" level="2" wait="3"/>
+	<table wave="3" enemyname="boar" level="3" wait="3"/>
+	<table wave="4" enemyname="bird" level="3" wait="5"/>
+	<table wave="4" enemyname="bird" level="3" wait="4"/>
+	<table wave="5" enemyname="boar" level="4" wait="4"/>
+	<table wave="5" enemyname="bird" level="4" wait="4"/>
+	<table wave="6" enemyname="boar" level="4" wait="4"/>
+	<table wave="6" enemyname="bird" level="4" wait="5"/>
+	<table wave="7" enemyname="bird" level="5" wait="4"/>
+	<table wave="7" enemyname="bird" level="5" wait="3"/>
+	<table wave="8" enemyname="boar" level="5" wait="4"/>
+	<table wave="8" enemyname="boar" level="5" wait="4"/>
+	<table wave="9" enemyname="bird" level="6" wait="4"/>
+	<table wave="9" enemyname="boar" level="6" wait="5"/>
+	<table wave="10" enemyname="boar" level="7" wait="4"/>
+	<table wave="10" enemyname="bird" level="7" wait="4"/>
+</ROOT>
