@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{6E8EDD7F-4737-4258-1D97-1EF2BAC22134}</ProjectGuid>
+	<ProjectGuid>{BE50B4BA-8BA8-B6AD-E497-8B373C0EBC2B}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\PathTool.cs" />
      <Compile Include="Assets\TileEditor\Editor\TileCreator.cs" />
      <Compile Include="Assets\TileEditor\Editor\TileEditor.cs" />
  <Reference Include="UnityEngine.UI">
@@ -84,9 +85,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{780795C1-5B75-B9E8-52B1-8F6D6BBC6A2D}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+      <Project>{7675E527-F50D-DFBC-FF76-D4665D6D10B2}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{095EF745-330F-9A82-3A49-947D69F99486}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{FFE83FE9-913E-4C7F-E5AE-2C97DBB071B8}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

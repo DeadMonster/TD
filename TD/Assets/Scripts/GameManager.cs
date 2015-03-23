@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour {
     //当前是否选中的创建防守单位的按钮
     bool m_isSelectedButton = false;
 
+    public bool m_debug = false;
+    public ArrayList m_PathNodes;
     void Awake()
     {
         Instance = this;
@@ -61,13 +63,13 @@ public class GameManager : MonoBehaviour {
             else if (t.name.CompareTo("point") == 0)//找到文字控件铜钱
             {
                 m_txt_point = t.GetComponent<Text>();
-                m_txt_life.text = string.Format("铜钱:<color=yellow>{0}</color>", m_point);
+                m_txt_point.text = string.Format("铜钱:<color=yellow>{0}</color>", m_point);
             }
             else if (t.name.CompareTo("but_try") == 0)//找到按键重新游戏
             {
                 m_but_try = t.GetComponent<Button>();
                 //添加按钮单击回调
-             //   m_but_try.onClick.AddListener( OnButRetry);
+                m_but_try.onClick.AddListener(OnButRetry);
                 //隐藏重新游戏按钮
                 m_but_try.gameObject.SetActive (false);
 
@@ -81,11 +83,23 @@ public class GameManager : MonoBehaviour {
                 trigger.delegates.Add(up);
             }
         }
+        BuildPath();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+	//如果选中创建士兵的按钮则取消摄像机操作
+        if (m_isSelectedButton)
+            return;
+        //按下鼠标操作
+        bool press = Input.GetMouseButton(0);
+
+        //获得鼠标移到距离
+        float mx = Input.GetAxis("Mouse X");
+        float my = Input.GetAxis("Mouse Y");
+
+        //移动摄像机
+        GameCamera.Inst.Control(press,mx,my);
 	}
     //更新文字控件波数
     public void SetWave(int wave)
@@ -116,7 +130,7 @@ public class GameManager : MonoBehaviour {
         return true;
     }
     //重新响应游戏按钮
-    void OnButRetry(GameObject go)
+    void OnButRetry()
     {
         Application.LoadLevel(Application.loadedLevelName);
     }
@@ -129,5 +143,34 @@ public class GameManager : MonoBehaviour {
    void OnbutCreateDefendrUp(BaseEventData data)
    {
 
+   }
+   [ContextMenu("BuildPath")]
+   void BuildPath()
+   {
+       m_PathNodes = new ArrayList();
+       //查找所有TAG为pathnode的Gameobject
+       GameObject[] objs = GameObject.FindGameObjectsWithTag("pathnode");
+       for (int i = 0; i < objs.Length; i++)
+       {
+           PathNode node=objs[i].GetComponent<PathNode>();
+           m_PathNodes.Add(node);
+       }
+   }
+
+   void OnDrawGizmos()
+   {
+       if(!m_debug||m_PathNodes==null)
+       {
+           return;
+       }
+       Gizmos.color = Color.blue;
+       foreach(PathNode node in m_PathNodes)
+       {
+           if (node.m_next != null)
+           {
+               //画线
+               Gizmos.DrawLine(node.transform.position, node.m_next.transform.position);
+           }
+       }
    }
 }
