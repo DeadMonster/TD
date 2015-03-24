@@ -1,0 +1,15 @@
+D:\Documents\GitHub\TD\TD\Temp\bin\Debug\Assembly-CSharp.dll
+D:\Documents\GitHub\TD\TD\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\Documents\GitHub\TD\TD\Temp\bin\Debug\Assembly-UnityScript-firstpass.dll
+D:\Documents\GitHub\TD\TD\Temp\bin\Debug\Boo.Lang.dll
+D:\Documents\GitHub\TD\TD\Temp\bin\Debug\UnityEditor.dll
+D:\Documents\GitHub\TD\TD\Temp\bin\Debug\UnityEngine.dll
+D:\Documents\GitHub\TD\TD\Temp\bin\Debug\UnityEngine.UI.dll
+D:\Documents\GitHub\TD\TD\Temp\bin\Debug\UnityScript.Lang.dll
+D:\Documents\GitHub\TD\TD\Temp\bin\Debug\Mono.Cecil.dll
+D:\Documents\GitHub\TD\TD\Temp\bin\Debug\Unity.SerializationLogic.dll
+D:\Documents\GitHub\TD\TD\Temp\bin\Debug\Unity.DataContract.dll
+D:\Documents\GitHub\TD\TD\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\Documents\GitHub\TD\TD\Temp\bin\Debug\Unity.CecilTools.dll
+D:\Documents\GitHub\TD\TD\obj\Debug\Assembly-CSharp.dll
+D:\Documents\GitHub\TD\TD\obj\Debug\Assembly-CSharp.pdb

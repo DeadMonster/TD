@@ -49,6 +49,7 @@
      <Compile Include="Assets\Editor\PathTool.cs" />
      <Compile Include="Assets\TileEditor\Editor\TileCreator.cs" />
      <Compile Include="Assets\TileEditor\Editor\TileEditor.cs" />
+     <None Include="Assets\enemy.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
