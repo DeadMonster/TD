@@ -49,7 +49,6 @@
      <Compile Include="Assets\Plugins\XMLParser\XMLNode.js" />
      <Compile Include="Assets\Plugins\XMLParser\XMLNodeList.js" />
      <Compile Include="Assets\Plugins\XMLParser\XMLParser.js" />
-     <None Include="Assets\enemy.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

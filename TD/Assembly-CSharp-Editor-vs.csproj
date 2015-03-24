@@ -49,7 +49,6 @@
      <Compile Include="Assets\Editor\PathTool.cs" />
      <Compile Include="Assets\TileEditor\Editor\TileCreator.cs" />
      <Compile Include="Assets\TileEditor\Editor\TileEditor.cs" />
-     <None Include="Assets\enemy.xml" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>D:/Documents/GitHub/TD/TD/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>

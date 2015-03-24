@@ -49,12 +49,10 @@
      <Compile Include="Assets\Scripts\AirEnemy.cs" />
      <Compile Include="Assets\Scripts\CameraPoint.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
-     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\GameCamera.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\PathNode.cs" />
      <Compile Include="Assets\TileEditor\TileObject.cs" />
-     <None Include="Assets\enemy.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using System.Collections.Generic;
+
 public class GameManager : MonoBehaviour {
     public static GameManager Instance;
-    public List<Enemy> m_EnemyList = new System.Collections.Generic.List<Enemy>();
+
     //波数
     public int m_wave = 1;
     public int m_waveMax = 10;
