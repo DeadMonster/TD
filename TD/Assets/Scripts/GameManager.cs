@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour {
     Text m_txt_life;
     Text m_txt_point;
 
+    // 地面的碰撞层
+    public LayerMask m_groundlayer;
     //重新游戏按钮
     Button m_but_try;
     //当前是否选中的创建防守单位的按钮
@@ -143,7 +145,42 @@ public class GameManager : MonoBehaviour {
     //抬起创建防守单位按钮
    void OnbutCreateDefendrUp(BaseEventData data)
    {
+       Debug.Log(1);
+       GameObject go = data.selectedObject;
+       //创建射线
+       Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+       RaycastHit hitinfo;
+       //计算是否与地面相撞
+       if (Physics.Raycast(ray, out hitinfo, 1000, m_groundlayer))
+       {
+           Debug.Log(go.name);
+           //如果选中的是个空格子
+           if(TileObject.get.getData(hitinfo.point.x,hitinfo.point.z)==(int)Defender.TileStatus.FREE)
+           {
+               //获得选中位置
+               Vector3 pos = new Vector3(hitinfo.point.x,0,hitinfo.point.z);
+               //使位置位于格子中心
+               pos.x = (int)pos.x + TileObject.get.tileSize * 0.5f;
+               pos.z = (int)pos.z + TileObject.get.tileSize * 0.5f;
 
+               //根据按钮名称创建不同防守单位
+               if (go.name.Contains("1")) //创建近战单位
+               {
+                   if (SetPoint(-15)) //消耗15铜钱
+                   {
+                       Defender.Create<Defender>(pos, new Vector3(0, 180, 0));
+                   }
+               }
+               else  //创建远程单位
+               {
+                   if (SetPoint(-20))
+                   {
+                       Defender.Create<Archer>(pos,new Vector3(0,180,0));
+                   }
+               }
+           }
+       }
+       m_isSelectedButton = false;
    }
    [ContextMenu("BuildPath")]
    void BuildPath()
