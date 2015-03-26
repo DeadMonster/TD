@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        GameManager.Instance.m_EnemyList.Add(this);
 	}
 	
 	// Update is called once per frame
@@ -55,6 +55,17 @@ public class Enemy : MonoBehaviour {
 
     public void DestoryMe()
     {
+        GameManager.Instance.m_EnemyList.Remove(this);
         Destroy(this.gameObject);
+    }
+
+    public void SetDamage(int damage)
+    {
+        m_life -= damage;
+        if (m_life < 0)
+        {
+            GameManager.Instance.SetPoint(5);
+            DestoryMe();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 public class GameCamera : MonoBehaviour {
 
     public static GameCamera Inst = null;
@@ -23,6 +23,7 @@ public class GameCamera : MonoBehaviour {
 
     //摄像机的焦点
     protected Transform m_cameraPoint;
+
 
     void Awake()
     {

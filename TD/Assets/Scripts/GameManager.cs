@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour {
 
     public bool m_debug = false;
     public ArrayList m_PathNodes;
+    public List<Enemy> m_EnemyList = new List<Enemy>();
     void Awake()
     {
         Instance = this;

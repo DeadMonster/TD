@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AirEnemy.cs" />
      <Compile Include="Assets\Scripts\CameraPoint.cs" />
+     <Compile Include="Assets\Scripts\Defender.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\GameCamera.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
